@@ -26,13 +26,13 @@ def select_random_files(source_folder, destination_folder, num_files):
             print(f"{file} has been copied to {destination_folder}")
 
 def main():
-    parser = argparse.ArgumentParser(description='Randomly select and copy JPG files from a source folder to a destination folder.')
+    parser = argparse.ArgumentParser(description='Randomly select and copy JPG files from a source folder to a output folder.')
     parser.add_argument('--source', required=True, help='Path to the source folder containing JPG files.')
     parser.add_argument('--output', required=True, help='Path to the output folder where files will be copied.')
     parser.add_argument('--num_files', type=int, required=True, help='Number of files to randomly select and copy.')
 
     args = parser.parse_args()
 
-    select_random_files(args.source, args.destination, args.num_files)
+    select_random_files(args.source, args.output, args.num_files)
 
 main()
